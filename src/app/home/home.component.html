@@ -1,86 +1,31 @@
-<div class="navbarcolor">
-  <input [(ngModel)]="searchText" placeholder="Search" (keyup.enter)="goToList()">
-  <a href="home"><img id="logo" src="../../assets/logo1.png"></a>
+<div class="caro">
+  <div class="overlay">
+    <h1>WELCOME TO HASHI</h1>
+    <h3 id="sub1">The bridge between anime and non-anime interests.</h3>
+    <h3 id="sub2">Browse non-anime shows and discover</h3>
+    <h3 id="sub3">anime shows</h3>
+  </div>
+    <ngb-carousel>
+        <ng-template ngbSlide class="slide">
+          <img [src]="images[0]" alt="Random first slide">
+        </ng-template>
+        <ng-template ngbSlide class="slide">
+          <img [src]="images[1]" alt="Random first slide">
+        </ng-template>
+        <ng-template ngbSlide class="slide">
+          <img [src]="images[2]" alt="Random first slide">
+        </ng-template>
+      </ngb-carousel>
 </div>
-<!--<div id="content">
-    <p id="categories">
-      Categories
-    </p>
-    <p id="premium">
-      Premium
-    </p>
-  </div>  --> 
-<slideshow [height]="'500px'"
-[minHeight]="'200px'"
-[autoPlay]="false"
-[showArrows]="true"
-[showDots]="true"
-[imageUrls]="imageSources"
-[lazyLoad]="imageSources?.length > 1"
-[autoPlayWaitForLazyLoad]="true">
 
-</slideshow>
-  
-  <ng-template #item let-item let-i="home">
-  
-      <div class="items">
-        <img src="{{ item.name }}">
-      </div>
-  
-  </ng-template>
-
-<hr>
-<div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="description">
-          <img id="heroes" src="https://scdn.nflximg.net/images/8116/3978116.jpg"  style="width:100px" style="height: 150px"></a>
-          <div class="stcaption">
-            <h3 id="stitle">Heroes</h3>
-            <p id="sfont">dkwdm</p>
-          </div>
-       
+<div class="container-fluid" id="body">
+  <h1>Top Shows</h1>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of topShows">
+      <div class="pic-container" (click)="navigate(item.id)">
+        <img [src]="item.url" alt="">
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../../assets/pr.jpg">
-          <img id= "prr" src="../../assets/pr.jpg"  style="width:100px" style="height: 150px"></a>
-          <div class="pcaption">
-            <h3 id="ptitle">Parks and Recreation</h3>  
-            <p id="pfont">sjdnsjd</p>
-          </div>
-       
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../../assets/got.jpg">
-          <img id="gote"src="../../assets/got.jpg"  style="width:100px" style="height: 150px"></a>
-          <div class="gcaption">
-            <h3 id="gtitle">Game of Thrones</h3>
-            <p id="gfont">
-              sdbshd
-              </p>
-          </div>
-       
-      </div>
-    </div>
-<!--<img id = "st" src="../../assets/ST.jpg">
 
-<p id="str">
-    Stranger Things
-   
-</p>
-
-<img id = "got" src="../../assets/got.jpg">
-<p id="gote">
-    Game Of Thrones
-</p>
-<img id = "pr" src="../../assets/pr.jpg">
-<p id="prr">
-    Parks and Recreation
-</p>
-
-
-<img src="../../assets/search.jpg"!-->
+  </div>
+</div>

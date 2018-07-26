@@ -1,108 +1,40 @@
-h1 {
-    font-size: 20px;
-    position: relative;
-    bottom: 360px;
-    left: 430px;
-    color: #1193DD;
-    text-decoration-line: underline;
+.img-container{
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
 }
-.navbarcolor{
-    background-color: #BCD1DD;
-}
-input {
-    position: relative;
-    left: 450px;
-    bottom: 25px;
-}
-button {
-    position: relative;
-    left: 450px;
-    bottom: 25px;
-}
-h6 {
-    color: #1193DD;
-    font-family: optima;  
-}
-#logo {
-    position: relative;
-    left: -190px;
-    bottom: 0px;
-    width: 95px;
-    height: 60px;
-}
-#bnha {
-    position: relative;
-    left: 390px;
-    bottom: -54px;
-    width: 250px;
-    height: 350px;
-}
-#rating {
-    color: #1193DD;
-    text-decoration-line: underline;
-    font-family: optima;
-}
-#about {
-    color: #1193DD;
-    text-decoration-line: underline;
-    font-family: optima;
-}
-.checked {
-    color: orange;
-    border: black;
-}
-#season {
-    color: #1193DD;
-    text-decoration-line: underline;
-    font-family: optima;
-}
-#season1 {
-    position: relative;
-}
-#season2 {
-    position: relative;
-    left: 106px;
-}
-#season3 {
-    position: relative; 
-    left: 212px;
-}
-#sub1{
-    position: relative;
-    left: 40px;
-    bottom: -10px;
-    background-color: #1193DD; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+
+
+.custom{
     display: inline-block;
-    font-size: 16px;
-    font-family: optima; 
-    
-}
-#dub1{
-    position: relative;
-    left: 100px;
-    bottom: -10px;
-    background-color: #1193DD; 
-    border: none;
+    border: solid thin white;
     color: white;
-    padding: 15px 32px;
+    background-color: #26408B;
+    transition: all ease-in 300ms;
+    height: 65px;
+    width: 205px;
+    margin: 0 25px;
+    font-size: 26px;
+}
+
+.custom:hover{
+    color: #26408B;
+    border: solid thin #26408B;
+    background-color: white;
+}
+
+.watch{
+    margin-top: 50px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: optima; 
 }
-#bnhagif {
-    position: relative;
-    left: 100px;
-    bottom: 675px;
-    width: 250px;
-    height: 350px;
+
+.rating{
+    text-align: center;
+    margin-top: 100px;
+    text-transform: capitalize;
+    font-size: 31px;
 }
-p {
-    font-family: optima;
+
+.yellow{
+    color: yellow;
 }

@@ -8,18 +8,15 @@ import { ListComponent } from './list/list.component';
 import { FilterPipe } from './filter.pipe';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { DescriptionComponent } from './description/description.component';
-import { UiModule } from './ui/ui.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CategoriesComponent } from './categories/categories.component';
+import { ResultsComponent } from './results/results.component';
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'result', component: ListComponent},
-  { path: 'description', component: DescriptionComponent},
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
+  { path: 'search/:id', component: ResultsComponent},
+  { path: 'description/:id', component: DescriptionComponent},
   { path: '**', component: HomeComponent }
 ];
 
@@ -29,17 +26,19 @@ const appRoutes: Routes = [
     HomeComponent,
     ListComponent,
     FilterPipe,
-    DescriptionComponent
+    DescriptionComponent,
+    CategoriesComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
     SlideshowModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      {  useHash: true } // <-- debugging purposes only
     ),
     FormsModule,
-    UiModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,2 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+.navbar{
+        background-color: #26408B;
+        height: 75px;
+        overflow: hidden;
+}
+
+#logo{
+    width: 55px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.form-inline div input{
+    width: 325px;
+}
+
+.input-group-prepend,
+.input-group-text{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}

@@ -1,0 +1,49 @@
+.selected{
+    text-align: center;
+    border-bottom: solid thin black;
+    text-transform: capitalize;
+    width: 225px;
+    margin: auto;
+    margin-top: 35px;
+    color: gray;
+    font-size: 21px;
+}
+.img-anime{
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.img-anime img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row{
+    margin-top: 35px;
+    border-bottom: solid thin black;
+    padding-bottom: 25px;
+}
+
+.desc{
+    padding: 10px  150px 10px 25px;
+}
+
+#cont{
+    padding-bottom: 100px;
+}
+
+.custom{
+    border: solid thin white;
+    color: white;
+    background-color: #26408B;
+    transition: all ease-in 300ms;
+}
+
+.custom:hover{
+    color: #26408B;
+    border: solid thin #26408B;
+    background-color: white;
+}

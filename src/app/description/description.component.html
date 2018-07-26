@@ -1,43 +1,16 @@
-<div class="navbarcolor"><input [(ngModel)]="searchText" placeholder="Search">
-  <button (click)="goToList()">
-      Search
-  </button>
-  <a href="home"><img id="logo" src="../../assets/logo2.png"></a>
-  </div>
-  <img id="bnha" src="{{descriptionpic}}" (mouseover)="startpreview()" (mouseout)="changegif()"> 
-  <h1>
-      My Hero Academia
-    </h1>
-  <hr>
-  <h2 id="rating">
-    Rating
-  </h2>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<h6>
-  (Source: Crunchyroll)
-</h6>
-  <h2 id="about">
-    About
-  </h2>
-  <p>
-      Izuku has dreamt of being a hero all his life—a lofty goal for anyone, but especially challenging for a kid with no superpowers. That’s right, in a world where eighty percent of the population has some kind of super-powered “quirk,” Izuku was unlucky enough to be born completely normal. But that’s not enough to stop him from enrolling in one of the world’s most prestigious hero academies
-  </p>
-  <h2 id="season">
-    Seasons: 3
-  </h2>
-  <img id="season1" src="../../assets/bnha.jpg">
-  <a href="http://www.crunchyroll.com/my-hero-academia" id="sub1">Watch with Subtitles</a>
-  <a href="https://www.funimation.com/shows/my-hero-academia/" id="dub1">Watch in English</a>
-  
-  <!--
-  <img id="season2" src="../../assets/bnha.jpg">
-  <button id="sub2">Watch (Sub)</button>
-  <button id="dub2">Watch (Dub)</button>
-  <img id="season3" src="../../assets/bnha.jpg">
-  <button id="sub3">Watch (Sub)</button>
-  <button id="dub3">Watch (Dub)</button> -->
+<div class="img-container">
+    <img [src]="selectedShow.url" alt="">
+</div>
+
+<div class="watch">
+  <a class="btn custom" [attr.href]="selectedShow.dub" target="_blank">Watch Dub</a>
+  <a class="btn custom" [attr.href]="selectedShow.sub" target="_blank">Watch Sub</a>
+</div>
+
+<div class="rating">
+  rating: 
+
+  <i class="fas fa-star yellow" *ngFor="let item of selectedShow.rating"></i>
+  <i class="fas fa-star" *ngFor="let item of selectedShow.ratingL"></i>
+
+</div>
